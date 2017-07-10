@@ -5,9 +5,9 @@ RSpec.describe QuickFind do
     @union = QuickFind.new(10)
   end
 
-  describe "#nodes" do
+  describe "number of nodes" do
     it "has 10 nodes" do
-      expect(@union.nodes).to match_array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      expect(@union.nodes.values).to match_array [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     end
   end
 
@@ -25,8 +25,9 @@ RSpec.describe QuickFind do
       union1
       union2
       union3
-      expect(@union.nodes).to match_array [0, 1, 1, 1, 1, 5, 6, 7, 8, 9]
+      expect(@union.nodes.values).to match_array [0, 4, 4, 4, 4, 5, 6, 7, 8, 9]
       expect(@union.connected?(1, 4)).to eq true
     end
+
   end
 end
