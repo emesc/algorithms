@@ -1,7 +1,7 @@
 # Coding various algorithms using Ruby
 
 ### Quick Union and Quick Find
-_Cost model_
+_Cost model_  
   initialize: N  
   union:      N  
   find:       1  
